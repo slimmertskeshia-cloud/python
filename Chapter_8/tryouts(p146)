@@ -1,0 +1,80 @@
+# Define the function
+def show_messages(messages):
+    """Print each text message from the list."""
+    for message in messages:
+        print(message)
+
+# Create a list of short text messages
+text_messages = [
+    "Hey, how are you?",
+    "Don't forget the meeting tomorrow.",
+    "Python is fun!",
+    "See you soon!"
+]
+
+# Pass the list to the function
+show_messages(text_messages)
+
+
+# Define the function to show messages
+def show_messages(messages):
+    """Print each text message from the list."""
+    for message in messages:
+        print(message)
+
+# Define the function to send messages
+def send_messages(messages, sent_messages):
+    """Print each message and move it to sent_messages."""
+    while messages:  # Keep running until the list is empty
+        current_message = messages.pop(0)  # Remove the first message
+        print(f"Sending message: {current_message}")
+        sent_messages.append(current_message)  # Add it to sent_messages
+
+# Create a list of short text messages
+text_messages = [
+    "Hey, how are you?",
+    "Don't forget the meeting tomorrow.",
+    "Python is fun!",
+    "See you soon!"
+]
+
+# Create an empty list to store sent messages
+sent_messages = []
+
+# Show original messages
+print("Original messages:")
+show_messages(text_messages)
+
+# Send messages
+print("\nSending messages...")
+send_messages(text_messages, sent_messages)
+
+# Print both lists after sending
+print("\nMessages list after sending:", text_messages)
+print("Sent messages list:", sent_messages)
+
+# Define the function to send messages
+def send_messages(messages, sent_messages):
+    """Print each message and move it to sent_messages."""
+    while messages:  # Keep running until the list is empty
+        current_message = messages.pop(0)  # Remove the first message
+        print(f"Sending message: {current_message}")
+        sent_messages.append(current_message)
+
+# Create a list of short text messages
+text_messages = [
+    "Hey, how are you?",
+    "Don't forget the meeting tomorrow.",
+    "Python is fun!",
+    "See you soon!"
+]
+
+# Create an empty list to store sent messages
+sent_messages = []
+
+# Call send_messages with a copy of the list
+send_messages(text_messages[:], sent_messages)
+
+# Print both lists after sending
+print("\nOriginal messages list (unchanged):", text_messages)
+print("Sent messages list:", sent_messages)

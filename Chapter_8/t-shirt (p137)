@@ -1,0 +1,35 @@
+# Define the function
+def make_shirt(size, message):
+    """Summarize the shirt size and message."""
+    print(f"\nThe shirt size is {size}, and it will have the message: '{message}'.")
+
+# Call the function using positional arguments
+make_shirt('Medium', 'Code is Life!')
+
+# Call the function using keyword arguments
+make_shirt(size='Large', message='Python Rocks!')
+
+
+# Define the function with default values
+def make_shirt(size='Large', message='I love Python'):
+    """Summarize the shirt size and message."""
+    print(f"\nThe shirt size is {size}, and it will have the message: '{message}'.")
+
+# Make a large shirt with the default message
+make_shirt()
+
+# Make a medium shirt with the default message
+make_shirt(size='Medium')
+
+# Make a shirt of any size with a different message
+make_shirt(size='Small', message='Keep Coding!')
+
+# Define the function with a default country
+def describe_city(city, country='Iceland'):
+    """Print a simple sentence about a city and its country."""
+    print(f"{city} is in {country}.")
+
+# Call the function for three different cities
+describe_city('Reykjavik')              # Uses default country (Iceland)
+describe_city('Akureyri')              # Uses default country (Iceland)
+describe_city('Tokyo', country='Japan') # Overrides default country

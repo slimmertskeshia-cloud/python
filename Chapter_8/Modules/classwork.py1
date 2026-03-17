@@ -1,0 +1,7 @@
+def make_hotdog(size, *toppings):
+    """Summarize the hotdog we are about to make."""
+    print(f"\nMaking a {size}-size hotdog with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+        
