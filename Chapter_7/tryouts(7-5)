@@ -1,0 +1,29 @@
+# Movie Tickets Program
+
+# Flag to control the loop
+active = True
+
+while active:
+    # Ask the user for their age
+    age_input = input("Enter your age (or type 'quit' to exit): ")
+
+    # Allow the user to quit
+    if age_input.lower() == 'quit':
+        active = False
+        print("Thanks for visiting the theater!")
+        break
+
+    # Validate input
+    if not age_input.isdigit():
+        print("That's not a valid age. Please enter a number.")
+        continue
+
+    age = int(age_input)
+
+    # Determine ticket price based on age
+    if age < 3:
+        print("Your ticket is FREE!")
+    elif 3 <= age <= 12:
+        print("Your ticket costs $10.")
+    else:
+        print("Your ticket costs $15.")

@@ -1,0 +1,42 @@
+
+# Pepperoni Pizza Ingredients
+pepperoni_pizza = [
+    "pizza dough",
+    "tomato sauce",
+    "mozzarella cheese",
+    "pepperoni slices",
+    "olive oil",
+    "oregano"
+]
+
+# BBQ Chicken Pizza Ingredients
+bbq_chicken_pizza = [
+    "pizza dough",
+    "bbq sauce",
+    "mozzarella cheese",
+    "cooked chicken (shredded)",
+    "red onion slices",
+    "cilantro"
+]
+
+# Slicing a list: Get the first three ingredients of Pepperoni Pizza
+sliced_pepperoni = pepperoni_pizza[:3]
+
+print("First three Pepperoni Pizza ingredients:")
+for ingredient in sliced_pepperoni:
+    print(ingredient)
+
+# Copying a list: Make a copy of the BBQ Chicken Pizza list
+copied_bbq = bbq_chicken_pizza[:]
+
+# Modify the original list and show both lists
+bbq_chicken_pizza.append("jalapenos")
+
+print("\nOriginal BBQ Chicken Pizza list after adding an ingredient:")
+print(bbq_chicken_pizza)
+
+print("\n Pepperoni Pizza list (unchanged):")
+print(pepperoni_pizza)
+ 
+
+

@@ -1,0 +1,47 @@
+# A simple program that asks the user if they want to continue or quit
+
+# Initialize the flag variable
+active = True
+
+# Start the while loop
+while active:
+    # Ask the user for input
+    user_input = input("Do you want to add more toppings? (yes/no): ").lower()
+
+    # Check the user's response
+    if user_input == 'no':
+        active = False  # Set the flag to False to stop the loop
+        print("Enjoy your pizza!")
+    elif user_input == 'yes':
+        print("Let's add more toppings!")
+    else:
+        print("Please enter 'yes i would like to add more toppings' or 'no i am done adding toppings'.")
+
+###################################################################################
+# Flag to control the loop
+active = True
+
+# Predefined list of pizza toppings
+toppings = ["pepperoni", "mushrooms", "onions", "sausage", "bacon", 
+            "extra cheese", "black olives", "green peppers", "pineapple", "spinach"]
+
+while active:
+    # Ask the user for input
+    topping = input("Enter a pizza topping (or type 'quit' to exit): ").lower()
+
+    if topping == 'quit':
+        active = False   # Set flag to False to stop the loop
+        break            # Exit the loop early if the user types 'quit'
+    
+    # Check if the input is a valid topping
+    if topping not in toppings:
+        print("That's not on our toppings list. Please try again.")
+        continue          # Skip the rest of the loop and ask for input again
+
+    print(f"You added {topping} to your pizza!")
+    
+    # Example condition: if user adds 'pepperoni', end the loop
+    if topping == "pepperoni":
+        print("Pepperoni added — that's enough for now!")
+        active = False    # Stop the loop
+        break             # Exit the loop when pepperoni is added
