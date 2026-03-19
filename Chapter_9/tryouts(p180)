@@ -1,0 +1,58 @@
+import random
+
+class Die:
+    def __init__(self, sides=6):
+        self.sides = sides
+
+    def roll_die(self):
+        return random.randint(1, self.sides)
+
+# Make a 6-sided die and roll it 10 times
+die_6 = Die()
+print("Rolling a 6-sided die:")
+for _ in range(10):
+    print(die_6.roll_die())
+
+print("\nRolling a 10-sided die:")
+die_10 = Die(10)
+for _ in range(10):
+    print(die_10.roll_die())
+
+print("\nRolling a 20-sided die:")
+die_20 = Die(20)
+for _ in range(10):
+    print(die_20.roll_die())
+
+import random
+
+# Create a list with 10 numbers and 5 letters
+lottery_items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                 'A', 'B', 'C', 'D', 'E']
+
+# Randomly select 4 items
+winning_combo = random.sample(lottery_items, 4)
+
+print("🎉 Winning Lottery Combo:", winning_combo)
+print("Any ticket matching these 4 numbers or letters wins a prize!")
+
+import random
+
+# Create the lottery pool
+lottery_items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                 'A', 'B', 'C', 'D', 'E']
+
+# Your ticket (choose any 4 items you like)
+my_ticket = [7, 'C', 2, 'A']
+
+# Counter for how many draws it takes
+draws = 0
+
+while True:
+    draws += 1
+    winning_combo = random.sample(lottery_items, 4)
+
+    if set(winning_combo) == set(my_ticket):
+        break
+
+print(f"🎉 Your ticket won after {draws} draws!")
+
