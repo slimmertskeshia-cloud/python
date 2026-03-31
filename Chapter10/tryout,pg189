@@ -1,0 +1,30 @@
+
+
+filename = 'learning_python.txt'
+
+# Read the entire file and print contents
+with open(filename) as file_object:
+    contents = file_object.read()
+print("Reading entire file:\n")
+print(contents)
+
+# Read line by line into a list and loop
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+print("\nReading line by line:")
+for line in lines:
+    print(line.strip())
+
+
+# Learning C
+print("\nReplacing 'Python' with 'C':")
+with open(filename) as file_object:
+    for line in file_object:
+        print(line.replace('Python', 'C').strip())
+
+#Simpler Code
+print("\nSimpler code using splitlines():")
+with open(filename) as file_object:
+    for line in file_object.read().splitlines():
+        print(line)

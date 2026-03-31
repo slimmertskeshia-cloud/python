@@ -1,0 +1,17 @@
+
+# Prompt the user for their name and write it to guest.txt
+name = input("What is your name? ")
+with open("guest.txt", "w") as file:
+    file.write(name)
+print(f"Hello {name}, your name has been written to guest.txt.")
+
+
+# Continuously prompt for names until the user decides to stop
+print("\nEnter names for the guest book. Type 'quit' to stop.")
+with open("guest_book.txt", "w") as file:
+    while True:
+        guest_name = input("Enter guest name: ")
+        if guest_name.lower() == 'quit':
+            break
+        file.write(guest_name + "\n")
+        print(f"Welcome, {guest_name}! Your name has been added to the guest book.")
