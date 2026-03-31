@@ -1,0 +1,108 @@
+
+# Conditional Tests
+car = 'subaru'
+print("Is car == 'subaru'? I predict True.")
+print(car == 'subaru')
+
+print("\nIs car == 'audi'? I predict False.")
+print(car == 'audi')
+
+animal = 'dog'
+print("\nIs animal == 'dog'? I predict True.")
+print(animal == 'dog')
+
+print("\nIs animal == 'cat'? I predict False.")
+print(animal == 'cat')
+
+number = 10
+print("\nIs number == 10? I predict True.")
+print(number == 10)
+
+print("\nIs number == 5? I predict False.")
+print(number == 5)
+
+fruit = 'apple'
+print("\nIs fruit == 'apple'? I predict True.")
+print(fruit == 'apple')
+
+print("\nIs fruit == 'banana'? I predict False.")
+print(fruit == 'banana')
+
+color = 'blue'
+print("\nIs color == 'blue'? I predict True.")
+print(color == 'blue')
+
+print("\nIs color == 'red'? I predict False.")
+print(color == 'red')
+
+
+# More Conditional Tests
+
+# Equality and inequality with strings
+name = "Alice"
+print("\nIs name == 'Alice'? I predict True.")
+print(name == "Alice")
+
+print("\nIs name != 'Bob'? I predict True.")
+print(name != "Bob")
+
+# Using lower() method
+city = "London"
+print("\nIs city.lower() == 'london'? I predict True.")
+print(city.lower() == "london")
+
+print("\nIs city.lower() == 'paris'? I predict False.")
+print(city.lower() == "paris")
+
+# Numerical tests
+age = 25
+print("\nIs age == 25? I predict True.")
+print(age == 25)
+
+print("\nIs age > 30? I predict False.")
+print(age > 30)
+
+print("\nIs age < 30? I predict True.")
+print(age < 30)
+
+print("\nIs age >= 25? I predict True.")
+print(age >= 25)
+
+print("\nIs age <= 20? I predict False.")
+print(age <= 20)
+
+# Using and/or
+score = 85
+print("\nIs score > 80 and score < 90? I predict True.")
+print(score > 80 and score < 90)
+
+print("\nIs score > 90 or score < 80? I predict False.")
+print(score > 90 or score < 80)
+
+# Test whether an item is in a list
+fruits = ['apple', 'banana', 'cherry']
+print("\nIs 'banana' in fruits? I predict True.")
+print('banana' in fruits)
+
+print("\nIs 'orange' in fruits? I predict False.")
+print('orange' in fruits)
+
+# Test whether an item is not in a list
+print("\nIs 'grape' not in fruits? I predict True.")
+print('grape' not in fruits)
+
+print("\nIs 'apple' not in fruits? I predict False.")
+print('apple' not in fruits)
+
+
+# Example if statements
+if car == 'subaru':
+    print("\nYes, the car is Subaru!")
+
+if age >= 18:
+    print("You are old enough to vote.")
+
+if 'banana' in fruits:
+    print("Banana is available in the list.")
+else:
+    print("Banana is not available.")
