@@ -1,0 +1,51 @@
+<h1>Todo List</h1>
+<a href="{% url 'create_todo' %}">Add a new task</a>
+<ul>
+  {% for todo in todos %}
+    <li>
+      {{ todo.task }} - {% if todo.completed %}Completed{% else %}Not completed{% endif %}
+      <a href="{% url 'update_todo' todo.id %}">Edit</a>
+      <a href="{% url 'delete_todo' todo.id %}">Delete</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<style>
+  body {
+    background-color: #ffff00; /* Bright Yellow Background */
+    font-family: "Broadway", "Copperplate", sans-serif; /* Broadway Font */
+    color: #000; /* Black text for readability on yellow */
+  }
+
+  h1 {
+    text-decoration: underline;
+  }
+
+  a {
+    color: #0000ee;
+    margin-left: 10px;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+</style>
+
+<h1>Todo List</h1>
+<a href="{% url 'create_todo' %}">Add a new task</a>
+
+<ul>
+  {% for todo in todos %}
+    <li>
+      {{ todo.task }} - 
+      <strong>{% if todo.completed %}Completed{% else %}Not completed{% endif %}</strong>
+      <a href="{% url 'update_todo' todo.id %}">Edit</a>
+      <a href="{% url 'delete_todo' todo.id %}">Delete</a>
+    </li>
+  {% endfor %}
+</ul>

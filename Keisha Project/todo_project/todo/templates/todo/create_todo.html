@@ -1,0 +1,59 @@
+<h1 class="title"tasks to copmlete </h1>
+<form method="POST" class="todo-form">
+    {% csrf_token %}
+    <input type="text" name="task" placeholder="Enter your task">
+    <button type="submit">Add Task</button>
+</form>
+<a href="{% url 'list_todos' %}" class="back-link">Back to list</a>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffe6f0; /* soft pink background */
+    }
+
+    .title {
+        color: #ff3399; /* bold pink heading */
+        text-align: center;
+    }
+
+    .todo-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .todo-form input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ff99cc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        width: 250px;
+    }
+
+    .todo-form button {
+        background-color: #ff66b2;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .todo-form button:hover {
+        background-color: #ff3399;
+    }
+
+    .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        color: #cc0066;
+        text-decoration: none;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
+</style>
